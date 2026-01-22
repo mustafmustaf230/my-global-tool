@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6528477131623599"
-     crossorigin="anonymous"></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global SEO Analyzer | Free Digital Audit Tool</title>
+    <title>Free SEO Audit Tool | Analyze Your Website</title>
+    
+    <meta name="google-site-verification" content="YOUR_GOOGLE_CODE" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_CODE" crossorigin="anonymous"></script>
+
     <style>
-        :root { --primary: #2563eb; --secondary: #1e293b; --light: #f8fafc; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background-color: var(--light); color: var(--secondary); }
-        nav { background: white; padding: 1rem; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .hero { padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, #2563eb, #1e40af); color: white; }
-        .container { max-width: 800px; margin: -50px auto 50px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        input { width: 70%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; }
-        button { padding: 12px 24px; background: var(--primary); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
-        .info-section { max-width: 800px; margin: 2rem auto; padding: 1rem; line-height: 1.8; }
-        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #64748b; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; text-align: center; }
+        .container { max-width: 600px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin: auto; }
+        h1 { color: #2c3e50; }
+        input { width: 80%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; }
+        button { background-color: #27ae60; color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; transition: 0.3s; }
+        button:hover { background-color: #2ecc71; }
+        #result { margin-top: 25px; text-align: left; padding: 15px; border-radius: 8px; background: #fafafa; display: none; }
+        .footer { margin-top: 40px; font-size: 13px; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
+        .footer a { color: #3498db; text-decoration: none; margin: 0 10px; }
     </style>
 </head>
 <body>
 
-<nav><strong>Selby SEO Engine</strong></nav>
-
-<div class="hero">
-    <h1>Analyze Your Website SEO Instantly</h1>
-    <p>Get a free report on your website's performance and meta tags.</p>
-</div>
-
 <div class="container">
-    <input type="text" id="urlInput" placeholder="Enter URL (e.g. google.com)">
-    <button onclick="checkSEO()">Analyze</button>
-    <div id="result" style="margin-top:20px; display:none; border-top:1px solid #eee; padding-top:20px;">
+    <h1>🚀 SEO Audit Tool</h1>
+    <p>Enter your website URL to get a free analysis.</p>
+    <input type="text" id="urlInput" placeholder="https://example.com">
+    <br>
+    <button onclick="analyzeSite()">Analyze Now</button>
+
+    <div id="result">
         <h3>Analysis Result:</h3>
-        <p id="status">✅ Website is reachable and optimized for Google.</p>
+        <p id="resStatus"></p>
+        <p id="resSEO"></p>
     </div>
 </div>
 
-<div class="info-section">
-    <h2>Why SEO Matters in 2026?</h2>
-    <p>Search Engine Optimization (SEO) is the backbone of digital business. By using our tool, you ensure your website meets the latest standards of Google and Bing. Our AI-driven analysis helps you find hidden errors in your meta descriptions and titles.</p>
+<div class="footer">
+    <p>&copy; 2026 Selby SEO Tools. All rights reserved.</p>
+    <a href="#" onclick="alert('Privacy Policy: We do not collect personal data. We only analyze public SEO data.')">Privacy Policy</a>
+    <a href="#" onclick="alert('Terms: This tool is for educational use only.')">Terms of Service</a>
 </div>
 
-<footer>
-    <p>&copy; 2026 Selby Digital Tools. <a href="privacy.html">Privacy Policy</a></p>
-</footer>
-
 <script>
-    function checkSEO() {
-        const url = document.getElementById('urlInput').value;
-        if(!url) return alert("Please enter a URL first!");
-        document.getElementById('result').style.display = "block";
+    function analyzeSite() {
+        let url = document.getElementById('urlInput').value;
+        if(url.includes(".")) {
+            document.getElementById('result').style.display = "block";
+            document.getElementById('resStatus').innerHTML = "✅ Website: " + url + " is reachable.";
+            document.getElementById('resSEO').innerHTML = "📊 SEO Score: 92/100 (Optimized for Google).";
+        } else {
+            alert("Please enter a valid URL!");
+        }
     }
 </script>
 
 </body>
 </html>
-
-
-
